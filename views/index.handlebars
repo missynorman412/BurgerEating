@@ -3,9 +3,9 @@
 <h2>What kind of hamburger do you want?</h2>
 
 <ul>
-  {{#each hamburger}}
-    {{#unless devoured}}
-      {{> hamburger/hamburger-block devoured=false}}
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <div>{{this.id}}{{this.burger_name}} </div>
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,9 +13,9 @@
 <h2>Hamburgers that are devoured</h2>
 
 <ul>
-  {{#each hamburger}}
+  {{#each burgers}}
     {{#if devoured}}
-      {{> hamburger/hamburger-block devoured=true}}
+      <div>{{this.id}}{{this.burger_name}}</div>
     {{/if}}
   {{/each}}
 </ul>
