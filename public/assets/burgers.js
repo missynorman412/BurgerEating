@@ -1,4 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
+$function();
+{
 
   $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
@@ -21,12 +23,12 @@
     );
   });
 
-  $(".create-form").on("submit", function(event) {
+  $(".add-burger").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
+    console.log("Entered");
     var newBurger = {
-      name: $("#ca").val().trim(),
+      name: $("#not-devoured").val().trim(),
       devour: $("[name=devour]:checked").val().trim()
     };
 
@@ -56,4 +58,5 @@
         location.reload();
       }
     );
-  });
+  })
+};

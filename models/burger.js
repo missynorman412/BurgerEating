@@ -1,5 +1,5 @@
 var orm = require("../config/orm.js");
-console.log(orm + "***");
+//console.log(orm + "***");
 var burger = {
   all: function(cb) {
     orm.all("burgers", function(res) {
